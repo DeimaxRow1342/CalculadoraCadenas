@@ -1,5 +1,8 @@
 function sumar(cadenaNumeros) {
-  return 0;
+  if(cadenaNumeros.length === 0){
+    return 0;
+  }
+  return cadenaNumeros[0];
 }
 
 export default sumar;
