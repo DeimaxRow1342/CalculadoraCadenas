@@ -1,13 +1,21 @@
-function sumar(cadenaNumeros) {
+function sumar(cadenaNumeros, separadores) {
   if (cadenaNumeros === "") {
     return 0;
   }
 
-  let suma = 0;
-  const numeros = cadenaNumeros.split(/[,|-]/); // Dividir la cadena en números usando comas y guiones como separadores
+  let separador = ",";
+  if (separadores && separadores.length > 0) {
+    separador = separadores[0];
+  }
 
+  const numeros = cadenaNumeros.split(new RegExp(`[${separador}|\\-]`));
+
+  let suma = 0;
   for (let i = 0; i < numeros.length; i++) {
-    suma += parseInt(numeros[i]);
+    const numero = parseInt(numeros[i]);
+    if (!isNaN(numero)) {
+      suma += numero;
+    }
   }
 
   return suma;
