@@ -5,10 +5,10 @@ function sumar(cadenaNumeros, separadores) {
 
   let separador = ",";
   if (separadores && separadores.length > 0) {
-    separador = separadores[0];
+    separador = separadores;
   }
 
-  const numeros = cadenaNumeros.split(new RegExp(`[${separador}|\\-]`));
+  const numeros = cadenaNumeros.split(new RegExp(`[${separador}|\\-]`)); 
 
   let suma = 0;
   for (let i = 0; i < numeros.length; i++) {

@@ -28,4 +28,8 @@ describe("Calcular la suma de una cadena de numeros", () => {
   it("Si se envia una cadena con numeros mayores a 1000, se deberian ignorar y retornar la suma correcta", () => {
     expect(sumar("1001,2,2000,3000", "")).toEqual(2);
   });
+
+  it("Si se envia una cadena con delimitador de cualquier longitud, se deberia retornar la suma correcta", () => {
+    expect(sumar("1***2***3", "***")).toEqual(6);
+  });
 });
