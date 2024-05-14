@@ -1,12 +1,13 @@
 function sumar(cadenaNumeros) {
-  let suma = 0;
-  
-  if(cadenaNumeros.length === 0){
+  if (cadenaNumeros === "") {
     return 0;
   }
 
-  for(let i=0; i<cadenaNumeros.length; i++){
-    suma += cadenaNumeros[i];
+  let suma = 0;
+  const numeros = cadenaNumeros.split(/[,|-]/); // Dividir la cadena en números usando comas y guiones como separadores
+
+  for (let i = 0; i < numeros.length; i++) {
+    suma += parseInt(numeros[i]);
   }
 
   return suma;
