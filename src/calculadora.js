@@ -5,11 +5,11 @@ function sumar(cadenaNumeros) {
     return 0;
   }
 
-  else if(cadenaNumeros.length === 1){
-    return cadenaNumeros[0];
+  for(let i=0; i<cadenaNumeros.length; i++){
+    suma += cadenaNumeros[i];
   }
 
-  return cadenaNumeros[0] + cadenaNumeros[1];
+  return suma;
 }
 
 export default sumar;

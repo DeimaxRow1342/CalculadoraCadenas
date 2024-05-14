@@ -12,4 +12,8 @@ describe("Calcular la suma de una cadena de numeros", () => {
   it("Si se envia una cadena con dos numeros, se deberia retornar la suma de estos numeros", () => {
     expect(sumar([2,4])).toEqual(6);
   });
+
+  it("Si se envia una cadena con varios numeros, se deberia retornar la suma de estos", () => {
+    expect(sumar([2,4,6,8])).toEqual(20);
+  });
 });
